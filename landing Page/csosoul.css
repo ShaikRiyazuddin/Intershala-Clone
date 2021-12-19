@@ -1,0 +1,17 @@
+
+.carausel-cell{
+    width: 85%;
+    height: 370px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-size: cover;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.09);
+    background-position: initial;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.carausel-cell:before{
+    display: block;
+    /* content: ""; */
+}

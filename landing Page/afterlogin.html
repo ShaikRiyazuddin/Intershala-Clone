@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afterLgin</title>
+    <link rel="stylesheet" href="navBar.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="afterLogin.css">
+    <style>
+    
+    .nameandMail{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 5%;
+        line-height: 23px;
+        
+    }
+
+    .messageDiv:hover .messageImg{
+        background-image: url(./images/message_new_hover.svg);
+    }
+    #userName{
+        font-weight: 600;
+        font-size: 14.5px;
+    }
+    .ratingsDiv{
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        height: 60px;
+        border-left: none;
+        border-right: none;
+    }
+    .ratingsDiv:hover{
+        color: #00A5EC;
+    }
+    #starRate{
+        font-size: 15px;
+        color: #ffc107;
+    }
+    #chevronIcon{
+        margin-left: -5px;
+        font-size: 30px;
+        font-weight: 100;
+    }
+    #moreOptions{
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+    }
+    #manageOptions{
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+    }
+    #moreIcon{
+        font-size: 30px;
+        transform: rotate(90deg);
+    }
+    #moreSubMenu{
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 20px;
+    }
+    #manageSubMenu{
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 40px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navbarAfterLogin">
+
+        </div>
+        
+
+    </div>
+</body>
+</html>
+<script type="module">
+    import navbar from "./scripts/afterLoginNavbar.js";
+
+    document.getElementById("navbarAfterLogin").innerHTML = navbar();
+
+
+    let singleData = JSON.parse(localStorage.getItem("singleUserLoginDetails"));
+    console.log(singleData);
+
+    let initial = singleData.name[0];
+
+    document.getElementById("userInitial").innerHTML = initial.toUpperCase();
+
+
+    document.querySelector(".subMenuSmall").style.height = "420px";
+
+    document.querySelector(".subMenuSmall").style.width = "250px";
+
+    document.querySelector(".subMenuSmall").style.left = "-310%";
+
+
+    document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${singleData.name}</div>
+                                                        
+                                                            <div>${singleData.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li><a id="logoutEvent" href="#">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+    document.getElementById("moreOptions").addEventListener("click",function(){
+        if(document.getElementById("moreSubMenu").style.display == 'none'){
+        document.getElementById("moreSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".first").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("moreSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "420px";
+        document.querySelector(".first").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("manageOptions").addEventListener("click",function(){
+        
+        if(document.getElementById("manageSubMenu").style.display == 'none'){
+        document.getElementById("manageSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "640px";
+        document.querySelector(".second").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("manageSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".second").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("logoutEvent").addEventListener("click",function(){
+        window.location.href = "navBar.html"
+    })
+
+    
+        
+
+        document.querySelector(".messageImg").onmouseover = () => {
+            let im =  document.querySelector(".messageImg")
+
+            im.src = "./images/message_new_hover.svg"
+        }
+        
+
+         document.querySelector(".messageImg").onmouseout = () => {
+           let im =  document.querySelector(".messageImg")
+            im.src =  "./images/message_new.svg"
+         }
+        
+
+
+
+</script>

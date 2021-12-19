@@ -1,0 +1,150 @@
+.box {
+  border: 1px solid black;
+  height: 450px;
+  background-color: #333333;
+  font-size: 15px;
+  line-height: 16px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  padding-top: 30px;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  /* border:1px solid black */
+}
+.lowerFooter {
+  display: flex;
+  margin-top: 30px;
+  /* border:1px solid black */
+  /* justify-content: space-around; */
+}
+.androidBox {
+  display: flex;
+  border: 1px solid white;
+  height: 43px;
+  width: 180px;
+  margin-left: 80px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-right: 0px;
+}
+.androidBox:hover {
+  cursor: pointer;
+}
+.icons:hover {
+  cursor: pointer;
+}
+.fab {
+  margin-top: 18px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.online {
+  font-size: 18.74px;
+  font-weight: bolder;
+}
+.discount {
+  /* border:1px solid yellow; */
+  margin-left: 6px;
+  border-radius: 5px;
+  background-color: #ff8c00;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 13px;
+}
+.training {
+  margin-top: 16px;
+}
+hr {
+  width: 1300px;
+  border: 0.5px solid rgb(91, 87, 87);
+}
+
+.copyright {
+  margin-left: 610px;
+  /* float: right; */
+  /* font-weight: 550; */
+  font-size: 14.5px;
+}
+.copyright:hover {
+  font-size: 14.5px;
+}
+.icons {
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#icon1:hover {
+  font-size: 22px;
+}
+p {
+  /* color: rgb(228, 228, 228); */
+  font-size: 14px;
+  /* font-weight: 600px; */
+}
+/* p:hover {
+  cursor: pointer;
+  font-size:15.5px;
+} */
+h3:hover {
+  cursor: pointer;
+}
+#iconsss {
+  font-size: 20px;
+  margin-top: 13px;
+}
+#iconsss:hover {
+  font-size: 22px;
+}
+.place p {
+  color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+.stream p {
+  color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+.training p {
+  color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+.about p {
+  color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+
+#footerDiv p{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#footerDiv h3{
+  display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+/* .place p:hover {
+  font-size: 16px;
+}
+.stream p:hover {
+  font-size: 16px;
+}
+.training p:hover {
+  font-size: 16px;
+}
+.about p:hover {
+  font-size: 16px;
+}
+.androidBox p:hover {
+  font-size: 14.5px;
+} */

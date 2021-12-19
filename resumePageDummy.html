@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="products.css" />
+    <script src="https://kit.fontawesome.com/f1949c3017.js" crossorigin="anonymous"></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      #rContainer {
+        width: 65%;
+        margin-left: 17%;
+        margin-right: 17%;
+        margin-bottom: 100px;
+      }
+      #rContent {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(42, 50, 58, 0.15) 0px 0px 0px 1px;
+      }
+      #title {
+        text-align: center;
+      }
+      #text {
+        margin-left: 20px;
+      }
+      #uploadText {
+        margin-left: 260px;
+        /* text-align: center; */
+        color: red;
+      }
+      #upload {
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+      ::-webkit-file-upload-button {
+        background-color: #0085ec;
+        color: white;
+        height: 30px;
+        width: 120px;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-weight: 600;
+      }
+      ::-webkit-file-upload-button:hover {
+        background-color: #0b72c1;
+        font-size: 17px;
+        cursor: pointer;
+      }
+      #ninput {
+        width: 700px;
+        margin-top: 30px;
+        margin-left: 65px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #einput {
+        width: 700px;
+        margin-top: 30px;
+        margin-left: 69px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #minput {
+        width: 700px;
+        margin-left: 28px;
+        margin-top: 30px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #dinput {
+        width: 700px;
+        margin-left: 54px;
+        margin-top: 30px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #painput {
+        width: 700px;
+        margin-left: 12px;
+        margin-top: 30px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #peinput {
+        width: 700px;
+        margin-left: 24px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        height: 25px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(135, 135, 135);
+      }
+      #pTag {
+        text-align: center;
+        font-size: 14px;
+      }
+      #rScript {
+        margin-top: 50px;
+        border: 1px solid #b5f1fe;
+        border-radius: 5px;
+        background-color: #eafcff;
+        display: flex;
+      }
+      #leftDiv {
+        width: 75%;
+      }
+      #rightDiv {
+        width: 25%;
+      }
+      #titles {
+        margin-left: 5px;
+        color: #006bc2;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 10px;
+        margin-top: 25px;
+      }
+      #para {
+        margin-left: 5px;
+        color: #2c87cd;
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+      #button {
+        margin-top: 40px;
+        margin-left: 35px;
+        width: 180px;
+        height: 35px;
+        background-color: #00a5ec;
+        color: white;
+        font-size: 14px;
+        font-weight: 550;
+        border-radius: 5px;
+        border: none;
+      }
+      #button:hover {
+        background-color: #0289c3;
+        cursor: pointer;
+      }
+      #iconss {
+        margin-top: 17px;
+        margin-left: 20px;
+        color: #006bc2;
+      }
+      /* pankaj part */
+      body {
+        /* color: white; */
+             box-sizing: border-box;
+             margin-left: 0px;
+             margin-right: 0px;
+             margin-bottom: 0px;
+       
+      }
+      .box {
+        border: 1px solid black;
+        height: 450px;
+        background-color: #333333;
+        font-size: 15px;
+        line-height: 16px;
+        color: white;
+        padding-top: 30px;
+      }
+      footer {
+        display: flex;
+        justify-content: space-around;
+        /* border:1px solid black */
+      }
+      .lowerFooter {
+        display: flex;
+        margin-top: 30px;
+        /* border:1px solid black */
+        /* justify-content: space-around; */
+      }
+      .androidBox {
+        display: flex;
+        border: 1px solid white;
+        height: 43px;
+        width: 180px;
+        margin-left: 50px;
+        border-radius: 5px;
+        font-weight: 500;
+        margin-right: 0px;
+      }
+      .androidBox:hover {
+        cursor: pointer;
+      }
+      .icons:hover {
+        cursor: pointer;
+      }
+      .fab {
+        margin-top: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .online {
+        font-size: 18.74px;
+        font-weight: bolder;
+      }
+      .discount {
+        /* border:1px solid yellow; */
+        margin-left: 6px;
+        border-radius: 5px;
+        background-color: #ff8c00;
+        /* padding-left: 5px;
+        padding-right: 5px; */
+        padding: 5px;
+        font-size:13px
+      }
+      .training {
+        margin-top: 16px;
+      }
+      hr {
+        width: 1350px;
+        border: 0.5px solid rgb(91, 87, 87);
+      }
+
+      .copyright {
+        margin-left: 600px;
+        /* float: right; */
+      }
+      .icons {
+        margin-left: 30px;
+        /* display: flex; */
+        justify-content: space-evenly;
+      }
+      #icon1:hover{
+        font-size:22px;
+      }
+      p{
+        color: rgb(228, 228, 228);
+        font-size: 14px;
+        /* font-weight: 600px; */
+      }
+      p:hover {
+        cursor: pointer;
+        font-size:15.5px;
+      }
+      h3:hover {
+        cursor: pointer;
+      }
+      #iconsss{
+        font-size:20px;
+        margin-top: 13px;
+      }
+      #iconsss:hover {
+        font-size:22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rContainer">
+      <div id="rScript"></div>
+      <h1 id="title">Resume</h1>
+      <div id="rContent">
+        <label for="" id="text">Name</label>
+        <input type="text" id="ninput" />
+        <br />
+        <label for="" id="text">Email</label>
+        <input type="email" id="einput" />
+        <br />
+        <label for="" id="text">Mobile No.</label>
+        <input type="number" id="minput" />
+        <br />
+        <label for="" id="text">Degree</label>
+        <input type="text" id="dinput" />
+        <br />
+        <label for="" id="text">Passing Year</label>
+        <input type="text" id="painput" />
+        <br />
+        <label for="" id="text">Percentage</label>
+        <input type="text" id="peinput" />
+        <br />
+        <p id="pTag">Or</p>
+        <label for="file-uload" id="uploadText">Upload Resume(Pdf,doc):</label>
+        <input type="file" id="upload" />
+      </div>
+    </div>
+    <!-- pankaj -->
+    <div class="box">
+      <footer>
+        <div class="place">
+          <h3>Internships by places</h3>
+          <p>Internship in India</p>
+          <p>Internship in Delhi</p>
+          <p>Internship in Bangalore</p>
+          <p>Internship in Hyderabad</p>
+          <p>Internship in Mumbai</p>
+          <p>Internship in Chennai</p>
+          <p>Internship in Gurgaon</p>
+          <p>Internship in Kolkata</p>
+          <p>Virtual internship</p>
+        </div>
+        <div class="stream">
+          <h3>Internship by Stream</h3>
+          <p>Computer Science Internship</p>
+          <p>Electronics Internship</p>
+          <p>Mechanical Internship</p>
+          <p>Civil Internship</p>
+          <p>Marketing Internship</p>
+          <p>Chemical Internship</p>
+          <p>Finance Internship</p>
+          <p>Summer Research Fellowship</p>
+          <p>Campus Ambassador Program</p>
+        </div>
+        <div class="training">
+          <span class="online">Online Trainings</span
+          ><span class="discount">OFFER </span>
+          <p>Programming with Python</p>
+          <p>Digital Marketing</p>
+          <p>Web Development</p>
+          <p>Machine Learning</p>
+          <p>Advanced Excel</p>
+          <p>Ethical Hacking</p>
+          <p>AutoCAD</p>
+          <p>Creative Writing</p>
+          <p>Data Science</p>
+        </div>
+        <div class="about">
+          <h3>About Internshala</h3>
+          <p>About us</p>
+          <p>We're hiring</p>
+          <p>Hire interns for your company</p>
+          <p>Team Diary</p>
+          <p>Blog</p>
+          <p>Our Services</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy</p>
+          <p>Contact us</p>
+        </div>
+      </footer>
+      <hr />
+      <div class="lowerFooter">
+        <div class="androidBox">
+          <i id="iconsss" class="fab fa-google-play"></i>
+          <p>Get Android App</p>
+        </div>
+        <div class="icons">
+          <i id= "icon1" class="fab fa-instagram fa-lg"></i>
+          <i id= "icon1" class="fab fa-twitter-square fa-lg"></i>
+          <i id= "icon1" class="fab fa-youtube fa-lg"></i>
+          <i id= "icon1" class="fab fa-linkedin fa-lg"></i>
+        </div>
+        <p class="copyright">© Copyright 2021 Internshala</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var jobData = JSON.parse(localStorage.getItem("jobData"));
+  console.log(jobData);
+
+  let leftDiv = document.createElement("div");
+  leftDiv.setAttribute("id", "leftDiv");
+  let rightDiv = document.createElement("div");
+  rightDiv.setAttribute("id", "rightDiv");
+
+  let spans = document.createElement("div");
+  spans.setAttribute("id", "iconss");
+  spans.innerHTML = `<span class="material-icons-outlined">info</span>`;
+
+  `<span class="material-icons-outlined">info</span>`;
+  let titles = document.createElement("p");
+  titles.innerHTML =
+    "Applying at " +
+    jobData.title +
+    "in multiple locations at " +
+    jobData.company;
+  titles.setAttribute("id", "titles");
+
+  let para = document.createElement("p");
+  para.textContent =
+    "This is the resume that the employer will see, make sure it is up to date. You can add or edit details below.";
+  para.setAttribute("id", "para");
+
+  let button = document.createElement("button");
+  button.innerHTML = "Proceed to application";
+  button.setAttribute("id", "button");
+  button.addEventListener("click", storeResume);
+
+  let cont = document.getElementById("rScript");
+
+  leftDiv.append(titles, para);
+  rightDiv.append(button);
+
+  cont.append(spans, leftDiv, rightDiv);
+
+  function storeResume() {
+    let inputN = document.getElementById("ninput").value;
+    let inputE = document.getElementById("einput").value;
+    let inputM = document.getElementById("minput").value;
+    let inputD = document.getElementById("dinput").value;
+    let inputPA = document.getElementById("painput").value;
+    let inputPE = document.getElementById("peinput").value;
+
+    let data = {
+      name: inputN,
+      email: inputE,
+      mobile: inputM,
+      degree: inputD,
+      passing_year: inputPA,
+      percentage: inputPE,
+    };
+
+  }
+</script>

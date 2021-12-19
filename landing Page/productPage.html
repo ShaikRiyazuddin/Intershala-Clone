@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles/productPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/navBar.css" />
+    <script src="https://kit.fontawesome.com/bb916d5bed.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="navBar"></div>
+    <div id="mainBody">
+      <div id="mainContainer">
+        <div id="leftContainer">
+          <p id="filterHead">
+            <i class="bx bx-filter-alt" style="margin-right: 5px; color: #00a5ec"></i>Filters
+          </p>
+          <div id="preferenceCheck">
+            <input type="checkbox" id="matchingPreferenceJob" />
+            <p>
+              Show opportunities as per my
+              <span style="color: #008bdc; font-weight: 500">preferences</span>
+            </p>
+          </div>
+          <div id="categoryInput">
+            <label for="category">Category</label><br />
+            <input type="text" id="category" placeholder="e.g. Marketing" />
+          </div>
+          <div id="locationInput">
+            <label for="location">Location</label><br />
+            <input type="text" id="location" placeholder="e.g. New Delhi" />
+          </div>
+          <div id="slideRemote">
+            <label>Remote jobs</label>
+            <div class="slideDiv" id="slideDiv1">
+              <div class="line1"></div>
+              <div class="circle1"></div>
+            </div>
+          </div>
+          <div id="slideIncludeIntern">
+            <label>Also include internships</label>
+            <div class="slideDiv" id="slideDiv2">
+              <div class="line2"></div>
+              <div class="circle2"></div>
+            </div>
+          </div>
+          <div id="resetLinkDiv">
+            <h4 style="text-align: right"><a href="" id="resetLink">Clear All</a></h4>
+          </div>
+          <div>
+            <div style="display: flex">
+              <h4
+                style="
+                  margin: auto;
+                  background-color: white;
+                  display: block;
+                  padding: 0px 10px;
+                  z-index: 1;
+                  color: #888;
+                "
+              >
+                OR
+              </h4>
+            </div>
+            <div
+              style="
+                border-top: 1px solid rgb(184, 183, 183);
+                width: 80%;
+                margin: auto;
+                margin-top: -10px;
+                position: relative;
+              "
+            ></div>
+          </div>
+          <p id="filterHead" style="margin-top: 20px">Search</p>
+          <div id="uniSearchDiv">
+            <input type="text" placeholder="e.g. Design, Mumbai, Masai" id="uniSearch" />
+            <button id="uniSearchB"><i class="fas fa-search" style="color: white"></i></button>
+          </div>
+        </div>
+
+        <div id="rightContainer"></div>
+      </div>
+    </div>
+    <div id="footerDiv"></div>
+  </body>
+</html>
+<script src="./components/dummyData.js"></script>
+<script type="module">
+  console.log(dummyData);
+  let oriData = [...dummyData];
+  dummyData = oriData.filter((i) => i.jobType[0] !== "Internship");
+
+  import appendProducts from "./scripts/appendProducts.js";
+  import footer from "./components/footer.js";
+  import navBar from "./components/navBar.js"
+
+  document.getElementById("navBar").innerHTML=navBar()
+
+  document.getElementById("footerDiv").innerHTML = footer();
+
+  let location = document.getElementById("rightContainer");
+
+  
+
+  appendProducts(dummyData, location);
+
+  let slideClicked1 = false;
+  let slideClicked2 = false;
+
+  document.getElementById("slideDiv2").addEventListener("click", () => {
+    slideClicked2 = ~slideClicked2;
+    if (slideClicked2) {
+      document.querySelector(".line2").style.backgroundColor = "#8FEAFE";
+      document.querySelector(".circle2").style.backgroundColor = "#006BC2";
+      document.querySelector(".circle2").style.left = "12px";
+      dummyData = oriData;
+      appendProducts(dummyData, location);
+    } else {
+      document.querySelector(".line2").style.backgroundColor = "#b2b2b2";
+      document.querySelector(".circle2").style.backgroundColor = "#666";
+      document.querySelector(".circle2").style.left = "-3px";
+      dummyData = oriData.filter((i) => i.jobType[0] !== "Internship");
+      appendProducts(dummyData, location);
+    }
+  });
+
+  document.getElementById("slideDiv1").addEventListener("click", () => {
+    slideClicked1 = ~slideClicked1;
+
+    if (slideClicked1) {
+      document.querySelector(".line1").style.backgroundColor = "#8FEAFE";
+      document.querySelector(".circle1").style.backgroundColor = "#006BC2";
+      document.querySelector(".circle1").style.left = "12px";
+      dummyData = dummyData.filter((a) => a.location.includes("Remote"));
+      appendProducts(dummyData, location);
+    } else {
+      document.querySelector(".line1").style.backgroundColor = "#b2b2b2";
+      document.querySelector(".circle1").style.backgroundColor = "#666";
+      document.querySelector(".circle1").style.left = "-3px";
+      dummyData = oriData;
+      appendProducts(dummyData, location);
+    }
+  });
+
+  document.getElementById("location").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("location").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.location.length; i++) {
+          if (item.location[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      appendProducts(fData, location);
+    }
+  });
+
+  document.getElementById("category").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("category").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.category.length; i++) {
+          if (item.category[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      console.log("fData:", fData);
+      appendProducts(fData, location);
+    }
+  });
+
+  document.getElementById("uniSearch").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("uniSearch").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.category.length; i++) {
+          if (item.category[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        for (var i = 0; i < item.location.length; i++) {
+          if (item.location[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      console.log("fData:", fData);
+      appendProducts(fData, location);
+    }
+  });
+</script>

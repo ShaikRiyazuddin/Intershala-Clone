@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Resume</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <script src="https://kit.fontawesome.com/f1949c3017.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resumePage.css">
+    <link rel="stylesheet" href="navBar1.css">
+    <!-- <style>
+
+
+    </style> -->
+
+      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="afterLogin.css">
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="rContainer">
+      <div id="rScript"></div>
+      <h1 id="title">Resume</h1>
+      <div id="rContent">
+        <label for="" id="text">Name:</label>
+        <input type="text" id="ninput" placeholder="Enter Name" />
+        <label for="" id="text">Mobile No :</label>
+        <input type="number" id="minput" placeholder="Enter Mobile Number" />
+        <!-- <br> -->
+        <label for="" id="text">Email:</label>
+        <input type="email" id="einput" placeholder="Enter Email Address" />
+
+        <label for="" id="text">Degree:</label>
+        <input type="text" id="dinput" placeholder="Enter Any Degree" />
+
+        <label for="" id="text">Passing Year:</label>
+        <input type="date" id="painput" />
+
+        <label for="" id="text">Percentage:</label>
+        <input type="number" id="peinput" placeholder="Marks %" />
+
+        <label for="" id="text">Inter/diploma:</label>
+        <input type="text" id="dinput1" placeholder="Enter One" />
+
+        <label for="" id="text1">Passing Year:</label>
+        <input type="date" id="painput1" />
+
+        <label for="" id="text">Percentage:</label>
+        <input type="number" id="peinput1" placeholder="Marks %" />
+
+        <label for="" id="text2">Secondary:</label>
+        <input type="text" id="dinput2" placeholder="Enter One" />
+
+        <label for="" id="text">Passing Year:</label>
+        <input type="date" id="painput2" />
+
+        <label for="" id="text">Percentage:</label>
+        <input type="number" id="peinput2" placeholder="Marks %" />
+
+        <br />
+        <p id="pTag">Or</p>
+        <label for="file-uload" id="uploadText">Upload Resume(Pdf,doc):</label>
+        <input type="file" accept="application/pdf,application/vnd.ms-excel" id="upload" />
+      </div>
+    </div>
+
+    <!-- pankaj Work -->
+    <div class="box">
+      <footer>
+        <div class="place">
+          <h3>Internships by places</h3>
+          <p>Internship in India</p>
+          <p>Internship in Delhi</p>
+          <p>Internship in Bangalore</p>
+          <p>Internship in Hyderabad</p>
+          <p>Internship in Mumbai</p>
+          <p>Internship in Chennai</p>
+          <p>Internship in Gurgaon</p>
+          <p>Internship in Kolkata</p>
+          <p>Virtual internship</p>
+        </div>
+        <div class="stream">
+          <h3>Internship by Stream</h3>
+          <p>Computer Science Internship</p>
+          <p>Electronics Internship</p>
+          <p>Mechanical Internship</p>
+          <p>Civil Internship</p>
+          <p>Marketing Internship</p>
+          <p>Chemical Internship</p>
+          <p>Finance Internship</p>
+          <p>Summer Research Fellowship</p>
+          <p>Campus Ambassador Program</p>
+        </div>
+        <div class="training">
+          <span class="online">Online Trainings</span
+          ><span class="discount">OFFER </span>
+          <p>Programming with Python</p>
+          <p>Digital Marketing</p>
+          <p>Web Development</p>
+          <p>Machine Learning</p>
+          <p>Advanced Excel</p>
+          <p>Ethical Hacking</p>
+          <p>AutoCAD</p>
+          <p>Creative Writing</p>
+          <p>Data Science</p>
+        </div>
+        <div class="about">
+          <h3>About Internshala</h3>
+          <p>About us</p>
+          <p>We're hiring</p>
+          <p>Hire interns for your company</p>
+          <p>Team Diary</p>
+          <p>Blog</p>
+          <p>Our Services</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy</p>
+          <p>Contact us</p>
+        </div>
+      </footer>
+      <hr />
+      <div class="lowerFooter">
+        <div class="androidBox">
+          <i id="iconsss" class="fab fa-google-play"></i>
+          <p>Get Android App</p>
+        </div>
+        <div class="icons">
+          <i id= "icon1" class="fab fa-instagram fa-lg"></i>
+          <i id= "icon1" class="fab fa-twitter-square fa-lg"></i>
+          <i id= "icon1" class="fab fa-youtube fa-lg"></i>
+          <i id= "icon1" class="fab fa-linkedin fa-lg"></i>
+        </div>
+        <p class="copyright">© Copyright 2021 Internshala</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type = "module">
+  var jobData = JSON.parse(localStorage.getItem("jobData"));
+  console.log(jobData);
+
+  let leftDiv = document.createElement("div");
+  leftDiv.setAttribute("id", "leftDiv");
+  let rightDiv = document.createElement("div");
+  rightDiv.setAttribute("id", "rightDiv");
+
+  let spans = document.createElement("div");
+  spans.setAttribute("id", "iconss");
+  spans.innerHTML = `<span class="material-icons-outlined">info</span>`;
+
+  `<span class="material-icons-outlined">info</span>`;
+  let titles = document.createElement("p");
+  titles.innerHTML =
+    "Applying at " +
+    jobData.title +
+    "in multiple locations at " +
+    jobData.company;
+  titles.setAttribute("id", "titles");
+
+  let para = document.createElement("p");
+  para.textContent =
+    "This is the resume that the employer will see, make sure it is up to date. You can add or edit details below.";
+  para.setAttribute("id", "para");
+
+  let button = document.createElement("button");
+  button.innerHTML = "Proceed to application";
+  button.setAttribute("id", "button");
+  button.addEventListener("click", storeResume);
+
+  let cont = document.getElementById("rScript");
+
+  leftDiv.append(titles, para);
+  rightDiv.append(button);
+
+  cont.append(spans, leftDiv, rightDiv);
+
+  function storeResume() {
+    let inputN = document.getElementById("ninput").value;
+    let inputE = document.getElementById("einput").value;
+    let inputM = document.getElementById("minput").value;
+    let inputD = document.getElementById("dinput").value;
+    let inputPA = document.getElementById("painput").value;
+    let inputPE = document.getElementById("peinput").value;
+    let inputD1 = document.getElementById("dinput1").value;
+    let inputD2 = document.getElementById("dinput2").value;
+    let inputPA1 = document.getElementById("painput1").value;
+    let inputPE1 = document.getElementById("peinput1").value;
+    let inputPA2 = document.getElementById("painput2").value;
+    let inputPE2 = document.getElementById("peinput2").value;
+
+    
+    let pdf = document.getElementById("upload").value;
+    if (pdf == "") {
+      let count = 0;
+      if (inputN === "") {
+        let inputN = document.getElementById("ninput");
+        inputN.placeholder = "Ⓘ This field required";
+        inputN.setAttribute("id", "emptyN");
+        count++;
+      }
+      if (inputM == "") {
+        let inputM = document.getElementById("minput");
+        inputM.placeholder = "Ⓘ This field required";
+        inputM.setAttribute("id", "emptyM");
+        count++;
+      }
+      if (inputE === "") {
+        let inputE = document.getElementById("einput");
+        inputE.placeholder = "Ⓘ This field required";
+        inputE.setAttribute("id", "emptyE");
+        count++;
+      }
+      if (inputD === "") {
+        let inputD = document.getElementById("dinput");
+        inputD.placeholder = "Ⓘ This field required";
+        inputD.setAttribute("id", "emptyD");
+        count++;
+      }
+      if (inputPA === "") {
+        let inputPA = document.getElementById("painput");
+        // inputPA.placeholder = "Ⓘ This field required";
+        inputPA.setAttribute("id", "emptyPA");
+        count++;
+      }
+      if (inputPE === "") {
+        let inputPE = document.getElementById("peinput");
+        inputPE.placeholder = "Ⓘ Required";
+        inputPE.setAttribute("id", "emptyPE");
+        count++;
+      }
+      if (inputD1 === "") {
+        let inputD1 = document.getElementById("dinput1");
+        inputD1.placeholder = "Ⓘ This field required";
+        inputD1.setAttribute("id", "emptyD1");
+        count++;
+      }
+      if (inputD2 === "") {
+        let inputD2 = document.getElementById("dinput2");
+        inputD2.placeholder = "Ⓘ This field required";
+        inputD2.setAttribute("id", "emptyD2");
+        count++;
+      }
+      if (inputPA1 === "") {
+        let inputPA1 = document.getElementById("painput1");
+        // inputPA1.placeholder = "Ⓘ This field required";
+        inputPA1.setAttribute("id", "emptyPA1");
+        count++;
+      }
+      if (inputPE1 === "") {
+        let inputPE1 = document.getElementById("peinput1");
+        inputPE1.placeholder = "Ⓘ Required";
+        inputPE1.setAttribute("id", "emptyPE1");
+        count++;
+      }
+      if (inputPA2 === "") {
+        let inputPA2 = document.getElementById("painput2");
+        // inputPA2.placeholder = "Ⓘ This field required";
+        inputPA2.setAttribute("id", "emptyPA2");
+        count++;
+      }
+      if (inputPE2 === "") {
+        let inputPE2 = document.getElementById("peinput2");
+        inputPE2.placeholder = "Ⓘ Required";
+        inputPE2.setAttribute("id", "emptyPE2");
+        count++;
+      }
+     
+      console.log(count)
+      if(count > 1){
+      alert("All fields required to continue")
+      }
+      else{
+        window.location.href = ("cover.html")
+      }
+      console.log("count")
+    }
+    else{
+      window.location.href = "cover.html"
+    }
+
+    console.log(count)
+    let warn = document.createElement("h3");
+    warn.textContent = "All fields are required to continue"
+
+    let data = {
+      name: inputN,
+      email: inputE,
+      mobile: inputM,
+      degree: inputD,
+      passing_year: inputPA,
+      percentage: inputPE,
+    };
+    console.log(data);
+    localStorage.setItem("resumeData", JSON.stringify(data));
+  }
+
+  let contNav = document.getElementById("container");
+  import navbar from './landing Page/scripts/afterLoginNavbar.js';
+  console.log(navbar);
+  contNav.innerHTML = navbar()
+
+  let singleData = JSON.parse(localStorage.getItem("singleUserLoginDetails"));
+    console.log(singleData);
+
+    let initial = singleData.name[0];
+
+    document.getElementById("userInitial").innerHTML = initial.toUpperCase();
+
+
+    document.querySelector(".subMenuSmall").style.height = "420px";
+
+    document.querySelector(".subMenuSmall").style.width = "250px";
+
+    document.querySelector(".subMenuSmall").style.left = "-310%";
+
+
+    document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${singleData.name}</div>
+                                                        
+                                                            <div>${singleData.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li><a id="logoutEvent" href="#">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+    document.getElementById("moreOptions").addEventListener("click",function(){
+        if(document.getElementById("moreSubMenu").style.display == 'none'){
+        document.getElementById("moreSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".first").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("moreSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "420px";
+        document.querySelector(".first").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("manageOptions").addEventListener("click",function(){
+        
+        if(document.getElementById("manageSubMenu").style.display == 'none'){
+        document.getElementById("manageSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "640px";
+        document.querySelector(".second").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("manageSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".second").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("logoutEvent").addEventListener("click",function(){
+        window.location.href = "navBar.html"
+    })
+
+    
+        
+
+        document.querySelector(".messageImg").onmouseover = () => {
+            let im =  document.querySelector(".messageImg")
+
+            im.src = "./images/message_new_hover.svg"
+        }
+        
+
+         document.querySelector(".messageImg").onmouseout = () => {
+           let im =  document.querySelector(".messageImg")
+            im.src =  "./images/message_new.svg"
+         }
+
+
+
+</script>

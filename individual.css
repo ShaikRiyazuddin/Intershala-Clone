@@ -1,0 +1,389 @@
+body {
+    font-family: "Inter", sans-serif;
+  }
+  #rContainer {
+    /* margin-top: 200px; */
+    width: 65%;
+    /* border: 1px solid rgb(180, 179, 179); */
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-bottom: 100px;
+  }
+  #rContent {
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  #rheadTitle {
+    text-align: center;
+  }
+  #divTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border: 1px solid black; */
+    padding-top: 20px;
+  }
+  #divTitleText {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 10px;
+  }
+  #grey {
+    color: #8c8c8c;
+    font-size: 15px;
+  }
+  #location {
+    margin-left: 12px;
+  }
+  #divDuration {
+    /* border: 1px solid black; */
+    display: flex;
+    /* justify-content: space-evenly; */
+  }
+  #divStart {
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    margin-right: 50px;
+    line-height: 10px;
+    font-size: 15px;
+    color: #303030;
+  }
+  #divCtc {
+    /* border: 1px solid black; */
+    margin-right: 50px;
+    line-height: 10px;
+    font-size: 15px;
+    color: #303030;
+  }
+  #divEnd {
+    /* border: 1px solid black; */
+    line-height: 10px;
+    font-size: 15px;
+    color: #303030;
+  }
+  #grey1 {
+    color: #8c8c8c;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  #jobType {
+    /* border: 1px solid black; */
+    width: 120px;
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 25px;
+    background-color: #f1f1f1;
+    color: #565555;
+    padding-top: 4px;
+  }
+  #count {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #line {
+    border-bottom: 1px solid rgb(207, 204, 204);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #about {
+    margin-left: 20px;
+    margin-right: 40px;
+    text-align: justify;
+    font-size: 14px;
+    color: #6b6b6b;
+  }
+  #aboutText {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  #skillsDiv {
+    /* border: 1px solid black; */
+    /* display:flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    margin-left: 20px;
+    margin-top: -20px;
+    max-width: 100%;
+  }
+  #skills {
+    margin-right: 20px;
+  }
+  #p1 {
+    font-size: 15px;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 25px;
+    padding-top: 4px;
+    background-color: #f1f1f1;
+    color: #565555;
+  }
+  #canApply {
+    margin-left: 20px;
+    line-height: 10px;
+    font-size: 15px;
+    color: #6b6b6b;
+  }
+  #salary {
+    margin-left: 20px;
+    color: #565555;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #button {
+    margin-left: 47%;
+    width: 130px;
+    height: 40px;
+    background-color: #0085ec;
+    border-radius: 5px;
+    border: #0085ec;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  #button:hover {
+    background-color: #0b72c1;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  #locDiv{
+    display: flex;
+  }
+  #locIcon{
+    margin-top: 17px;
+    width: 1%;
+    margin-left: 20px;
+  }
+  #icon{
+    font-size:18px;
+    color: #9d9d9d;
+  }
+  #iconStart{
+    font-size:16px;
+    margin-right: 3px;
+  }
+  #img{
+    width: 70px;
+    height: 70px;
+  }
+
+
+
+   /* Pankaj Css */
+
+   body {
+    /* color: white; */
+         box-sizing: border-box;
+         margin-left: 0px;
+         margin-right: 0px;
+         margin-bottom: 0px;
+   
+  }
+  .box {
+    border: 1px solid black;
+    height: 450px;
+    background-color: #333333;
+    font-size: 15px;
+    line-height: 16px;
+    color: white;
+    padding-top: 30px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    /* border:1px solid black */
+  }
+  .lowerFooter {
+    display: flex;
+    margin-top: 30px;
+    /* border:1px solid black */
+    /* justify-content: space-around; */
+  }
+  .androidBox {
+    display: flex;
+    border: 1px solid white;
+    height: 43px;
+    width: 180px;
+    margin-left: 80px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-right: 0px;
+  }
+  .androidBox:hover {
+    cursor: pointer;
+  }
+  .icons:hover {
+    cursor: pointer;
+  }
+  .fab {
+    margin-top: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .online {
+    font-size: 18.74px;
+    font-weight: bolder;
+  }
+  .discount {
+    /* border:1px solid yellow; */
+    margin-left: 6px;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size:13px
+  }
+  .training {
+    margin-top: 16px;
+  }
+  hr {
+    width: 1300px;
+    border: 0.5px solid rgb(91, 87, 87);
+  }
+
+  .copyright {
+    margin-left: 710px;
+    /* float: right; */
+    /* font-weight: 550; */
+    font-size:14.5px;
+  }
+  .copyright:hover{
+      font-size:14.5px;
+  }
+  .icons {
+    margin-left: 30px;
+    /* display: flex; */
+    justify-content: space-evenly;
+  }
+  #icon1:hover{
+    font-size:22px;
+  }
+  p{
+    /* color: rgb(228, 228, 228); */
+    font-size: 14px;
+    /* font-weight: 600px; */
+  }
+  /* p:hover {
+    cursor: pointer;
+    font-size:15.5px;
+  } */
+  h3:hover {
+    cursor: pointer;
+  }
+  #iconsss{
+    font-size:20px;
+    margin-top: 13px;
+  }
+  #iconsss:hover {
+    font-size:22px;
+  }
+  .place p {
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+  .stream p {
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+  .training p {
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+  .about p {
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+  /* .place p:hover{
+      font-size:16px;
+  }
+  .stream p:hover{
+    font-size:16px;
+}
+.training p:hover{
+    font-size:16px;
+}
+.about p:hover{
+    font-size:16px;
+} */
+.androidBox p:hover {
+    font-size:14.5px;
+}
+
+
+
+
+/********************************************* Rahul Css ************************************** */
+.nameandMail{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding-top: 5%;
+  line-height: 23px;
+  
+}
+
+.messageDiv:hover .messageImg{
+  background-image: url(./images/message_new_hover.svg);
+}
+#userName{
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.ratingsDiv{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  height: 60px;
+  border-left: none;
+  border-right: none;
+}
+.ratingsDiv:hover{
+  color: #00A5EC;
+}
+#starRate{
+  font-size: 15px;
+  color: #ffc107;
+}
+#chevronIcon{
+  margin-left: -5px;
+  font-size: 30px;
+  font-weight: 100;
+}
+#moreOptions{
+  display: flex;
+  width: 100%;
+  /* position: absolute; */
+  justify-content: space-between;
+}
+#manageOptions{
+  display: flex;
+  width: 100%;
+  /* position: absolute; */
+  justify-content: space-between;
+}
+#moreIcon{
+  font-size: 30px;
+  transform: rotate(90deg);
+}
+#moreSubMenu{
+  background-color: #fff;
+  border-top: none;
+  display: none;
+  margin-left: 20px;
+}
+#manageSubMenu{
+  background-color: #fff;
+  border-top: none;
+  display: none;
+  margin-left: 40px;
+}
