@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/loginPage.css" />
     <link rel="stylesheet" href="./styles/navBar.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./afterLogin.css">
     <link rel="stylesheet" href="./styles/productPage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -444,6 +445,13 @@
       document.querySelector(".second").style.transform = "rotate(90deg)";
     }
   });
+
+
+  document.getElementById("logoutEvent").addEventListener("click",function(){
+        window.location.href = "navBar.html"
+    })
+
+    
 
   document.getElementById("logoutEvent").addEventListener("click", function () {
     window.location.href = "navBar.html";
